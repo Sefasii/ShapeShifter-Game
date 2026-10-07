@@ -1,7 +1,7 @@
 # ShapeShifter-Game
 --------------------
-Okul: Dokuz Eylül Üniversitesi
-Bölüm: Bilgisayar Mühendisliği
+1) Okul: Dokuz Eylül Üniversitesi
+2) Bölüm: Bilgisayar Mühendisliği
 Sınıf: 1. Sınıf
 Öğrenciler: Deniz / Berkay / İdil / Ahmet
 Ders: Project Based Learning 
