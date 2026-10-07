@@ -175,52 +175,60 @@ namespace Project
                     else
                         symbol = "E";
                 }
-                if (place == 1)
+                if (place == 1 && a1 == " ")
                 {
                     aa = symbol;
                     a1 = aa;
+                    ControlNOS++;
                 }
-                else if (place == 2)
+                else if (place == 2 && a2 == " ")
                 {
                     ab = symbol;
                     a2 = ab;
+                    ControlNOS++;
                 }
-                else if (place == 3)
+                else if (place == 3 && a3 == " ")
                 {
                     ac = symbol;
                     a3 = ac;
+                    ControlNOS++;
                 }
-                else if (place == 4)
+                else if (place == 4 && a4 == " ")
                 {
                     ba = symbol;
                     a4 = ba;
+                    ControlNOS++;
                 }
-                else if (place == 5)
+                else if (place == 5 && a5 == " ")
                 {
                     bb = symbol;
                     a5 = bb;
+                    ControlNOS++;
                 }
-                else if (place == 6)
+                else if (place == 6 && a6 == " ")
                 {
                     bc = symbol;
                     a6 = bc;
+                    ControlNOS++;
                 }
-                else if (place == 7)
+                else if (place == 7 && a7 == " ")
                 {
                     ca = symbol;
                     a7 = ca;
+                    ControlNOS++;
                 }
-                else if (place == 8)
+                else if (place == 8 && a8 == " ")
                 {
                     cb = symbol;
                     a8 = cb;
+                    ControlNOS++;
                 }
-                else if (place == 9)
+                else if (place == 9 && a9 == " ")
                 {
                     cc = symbol;
                     a9 = cc;
+                    ControlNOS++;
                 }
-                ControlNOS++;
             }
             int MixShifts = 0;
             int Shift;
