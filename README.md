@@ -2,7 +2,7 @@
 --------------------
 1) Okul: Dokuz Eylül Üniversitesi
 2) Bölüm: Bilgisayar Mühendisliği
-Sınıf: 1. Sınıf
-Öğrenciler: Deniz / Berkay / İdil / Ahmet
-Ders: Project Based Learning 
-Kaçıncı Proje: 1. Proje
+3) Sınıf: 1. Sınıf
+4) Öğrenciler: Deniz / Berkay / İdil / Ahmet
+5) Ders: Project Based Learning 
+6) Kaçıncı Proje: 1. Proje
