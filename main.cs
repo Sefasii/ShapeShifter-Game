@@ -631,7 +631,7 @@ namespace Project
                 Console.WriteLine("Game Mode");
                 Console.WriteLine("-------------");
                 Console.WriteLine("Player  : " + playerName);
-                Console.WriteLine("Symbols : " + NOTOS);
+                Console.WriteLine("Symbols : " + notos);
                 Console.WriteLine("Number of Symbols : " + NOS);
                 Console.WriteLine("Number of Shifts  : " + BoardGenerationShifts);
                 Console.WriteLine();
