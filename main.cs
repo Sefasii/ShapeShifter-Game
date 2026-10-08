@@ -931,19 +931,6 @@ namespace Project
                             }
                         }
                     }
-                    else
-                    {
-                        Console.SetCursorPosition(24, 26);
-                        Console.Write("          ");
-                        Console.SetCursorPosition(0, 29);
-                        Console.WriteLine("             ");
-                        Console.Write("                                                      ");
-                        Console.SetCursorPosition(0, 29);
-                        Console.WriteLine("-------------");
-                        Console.Write("Invalid Shift. Please enter a number between 1 and 12.");
-                        Console.SetCursorPosition(24, 26);
-                        Shift = Convert.ToInt32(Console.ReadLine());
-                    }
                     Console.Clear();
                     BoardScore = 0;
                     ActualNumOfShifts++;
