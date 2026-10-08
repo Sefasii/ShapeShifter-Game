@@ -664,6 +664,8 @@ namespace Project
                 if (a1 == aa && a2 == ab && a3 == ac && a4 == ba && a5 == bb && a6 == bc && a7 == ca && a8 == cb && a9 == cc)
                 {
                     gamemode = "end";
+                    Console.SetCursorPosition(0, 18);
+                    Console.Write("--- Completed ---");
                     Console.SetCursorPosition(0, 29);
                     Console.WriteLine("-------------");
                     Console.WriteLine("Congratulations! You have finished the game.");
