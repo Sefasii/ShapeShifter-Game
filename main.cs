@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -10,6 +11,8 @@ namespace Project
     {
         static void Main(string[] args)
         {
+
+            //---------------------------------------------------------------
             //Değişkenler
             //---------------------------------------------------------------
 
@@ -28,7 +31,17 @@ namespace Project
             int MixShifts = 0;
             int Shift;
             int ControlNOS = 0;
-            char symbol = ' ';
+            char symbol;
+
+            /* Debug Kısmı
+            -----------------------------------------------------------------
+            int NOS = 5;
+            int NOTOS = 4;
+            int BoardGenerationShifts = 10;
+            string playerName = "Human";
+            string notos = " ";
+            -----------------------------------------------------------------
+            Debug Kısmı */
 
             //---------------------------------------------------------------
             //Player Seçimi
@@ -149,14 +162,6 @@ namespace Project
             }
             Console.WriteLine("Chosen Shifts: " + BoardGenerationShifts);
             Console.WriteLine("-------------");
-
-            //---------------------------------------------------------------------------
-            //int NOS = 5;
-            //int NOTOS = 4;
-            //int BoardGenerationShifts = 10;
-            //string playerName = "Human";
-            //string notos = " ";
-            //---------------------------------------------------------------------------
 
             //---------------------------------------------------------------
             //Tahtaya Rastgele Sembol Yerleştirme
@@ -539,10 +544,6 @@ namespace Project
                         }
                         MixShifts++;
                     }
-                }
-                else
-                {
-                    Shift = rand.Next(1, 13);
                 }
                 //Console.Clear();
                 //Console.WriteLine("--- Mixing Board ---");
