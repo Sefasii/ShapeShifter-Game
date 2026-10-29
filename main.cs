@@ -7,11 +7,10 @@ using System.Threading;
 using System.Threading.Tasks;
 namespace Project
 {
-    internal class Program
+    internal class Project
     {
         static void Main(string[] args)
         {
-
             //---------------------------------------------------------------
             //Değişkenler
             //---------------------------------------------------------------
@@ -278,12 +277,22 @@ namespace Project
             //Tahtayı Karıştırma
             //---------------------------------------------------------------
 
+            Console.Clear();
+            int oldShift = 0;
             while (MixShifts < BoardGenerationShifts)
             {
                 Shift = rand.Next(1, 13);
                 if (Shift == 1)
                 {
-                    if (a1 != ' ' || a2 != ' ' || a3 != ' ')
+                    if (oldShift == 4)
+                        continue;
+                    else if (a1 != ' ' && a2 != ' ' && a3 != ' ')
+                        continue;
+                    else if (a1 == ' ' && a2 != ' ' && a3 != ' ')
+                        continue;
+                    else if (a1 == ' ' && a2 == ' ' && a3 != ' ')
+                        continue;
+                    else if (a1 != ' ' || a2 != ' ' || a3 != ' ')
                     {
                         if (a2 != ' ' && a3 == ' ')
                         {
@@ -301,11 +310,22 @@ namespace Project
                             a2 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 2)
                 {
-                    if (a4 != ' ' || a5 != ' ' || a6 != ' ')
+                    if (oldShift == 5)
+                        continue;
+                    else if (a4 != ' ' && a5 != ' ' && a6 != ' ')
+                        continue;
+                    else if (a4 == ' ' && a5 != ' ' && a6 != ' ')
+                        continue;
+                    else if (a4 == ' ' && a5 == ' ' && a6 != ' ')
+                        continue;
+                    else if (a4 != ' ' || a5 != ' ' || a6 != ' ')
                     {
                         if (a5 != ' ' && a6 == ' ')
                         {
@@ -323,11 +343,22 @@ namespace Project
                             a5 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 3)
                 {
-                    if (a7 != ' ' || a8 != ' ' || a9 != ' ')
+                    if (oldShift == 6)
+                        continue;
+                    else if (a7 != ' ' && a8 != ' ' && a9 != ' ')
+                        continue;
+                    else if (a7 == ' ' && a8 != ' ' && a9 != ' ')
+                        continue;
+                    else if (a7 == ' ' && a8 == ' ' && a9 != ' ')
+                        continue;
+                    else if (a7 != ' ' || a8 != ' ' || a9 != ' ')
                     {
                         if (a8 != ' ' && a9 == ' ')
                         {
@@ -345,11 +376,22 @@ namespace Project
                             a8 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 4)
                 {
-                    if (a1 != ' ' || a2 != ' ' || a3 != ' ')
+                    if (oldShift == 1)
+                        continue;
+                    else if (a1 != ' ' && a2 != ' ' && a3 != ' ')
+                        continue;
+                    else if (a1 != ' ' && a2 != ' ' && a3 == ' ')
+                        continue;
+                    else if (a1 != ' ' && a2 == ' ' && a3 == ' ')
+                        continue;
+                    else if (a1 != ' ' || a2 != ' ' || a3 != ' ')
                     {
                         if (a2 != ' ' && a1 == ' ')
                         {
@@ -367,11 +409,22 @@ namespace Project
                             a2 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 5)
                 {
-                    if (a4 != ' ' || a5 != ' ' || a6 != ' ')
+                    if (oldShift == 2)
+                        continue;
+                    else if (a4 != ' ' && a5 != ' ' && a6 != ' ')
+                        continue;
+                    else if (a4 != ' ' && a5 != ' ' && a6 == ' ')
+                        continue;
+                    else if (a4 != ' ' && a5 == ' ' && a6 == ' ')
+                        continue;
+                    else if (a4 != ' ' || a5 != ' ' || a6 != ' ')
                     {
                         if (a5 != ' ' && a4 == ' ')
                         {
@@ -389,11 +442,22 @@ namespace Project
                             a5 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 6)
                 {
-                    if (a7 != ' ' || a8 != ' ' || a9 != ' ')
+                    if (oldShift == 3)
+                        continue;
+                    else if (a7 != ' ' && a8 != ' ' && a9 != ' ')
+                        continue;
+                    else if (a7 != ' ' && a8 != ' ' && a9 == ' ')
+                        continue;
+                    else if (a7 != ' ' && a8 == ' ' && a9 == ' ')
+                        continue;
+                    else if (a7 != ' ' || a8 != ' ' || a9 != ' ')
                     {
                         if (a8 != ' ' && a7 == ' ')
                         {
@@ -411,11 +475,22 @@ namespace Project
                             a8 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 7)
                 {
-                    if (a1 != ' ' || a4 != ' ' || a7 != ' ')
+                    if (oldShift == 10)
+                        continue;
+                    else if (a1 != ' ' && a4 != ' ' && a7 != ' ')
+                        continue;
+                    else if (a1 == ' ' && a4 != ' ' && a7 != ' ')
+                        continue;
+                    else if (a1 == ' ' && a4 == ' ' && a7 != ' ')
+                        continue;
+                    else if (a1 != ' ' || a4 != ' ' || a7 != ' ')
                     {
                         if (a4 != ' ' && a7 == ' ')
                         {
@@ -433,11 +508,22 @@ namespace Project
                             a4 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 8)
                 {
-                    if (a2 != ' ' || a5 != ' ' || a8 != ' ')
+                    if (oldShift == 11)
+                        continue;
+                    else if (a2 != ' ' && a5 != ' ' && a8 != ' ')
+                        continue;
+                    else if (a2 == ' ' && a5 != ' ' && a8 != ' ')
+                        continue;
+                    else if (a2 == ' ' && a5 == ' ' && a8 != ' ')
+                        continue;
+                    else if (a2 != ' ' || a5 != ' ' || a8 != ' ')
                     {
                         if (a5 != ' ' && a8 == ' ')
                         {
@@ -455,11 +541,22 @@ namespace Project
                             a5 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 9)
                 {
-                    if (a3 != ' ' || a6 != ' ' || a9 != ' ')
+                    if (oldShift == 12)
+                        continue;
+                    else if (a3 != ' ' && a6 != ' ' && a9 != ' ')
+                        continue;
+                    else if (a3 == ' ' && a6 != ' ' && a9 != ' ')
+                        continue;
+                    else if (a3 == ' ' && a6 == ' ' && a9 != ' ')
+                        continue;
+                    else if (a3 != ' ' || a6 != ' ' || a9 != ' ')
                     {
                         if (a6 != ' ' && a9 == ' ')
                         {
@@ -477,11 +574,22 @@ namespace Project
                             a6 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 10)
                 {
-                    if (a1 != ' ' || a4 != ' ' || a7 != ' ')
+                    if (oldShift == 7)
+                        continue;
+                    else if (a1 != ' ' && a4 != ' ' && a7 != ' ')
+                        continue;
+                    else if (a1 != ' ' && a4 != ' ' && a7 == ' ')
+                        continue;
+                    else if (a1 != ' ' && a4 == ' ' && a7 == ' ')
+                        continue;
+                    else if (a1 != ' ' || a4 != ' ' || a7 != ' ')
                     {
                         if (a4 != ' ' && a1 == ' ')
                         {
@@ -499,11 +607,22 @@ namespace Project
                             a4 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 11)
                 {
-                    if (a2 != ' ' || a5 != ' ' || a8 != ' ')
+                    if (oldShift == 8)
+                        continue;
+                    else if (a2 != ' ' && a5 != ' ' && a8 != ' ')
+                        continue;
+                    else if (a2 != ' ' && a5 != ' ' && a8 == ' ')
+                        continue;
+                    else if (a2 != ' ' && a5 == ' ' && a8 == ' ')
+                        continue;
+                    else if (a2 != ' ' || a5 != ' ' || a8 != ' ')
                     {
                         if (a5 != ' ' && a2 == ' ')
                         {
@@ -521,11 +640,22 @@ namespace Project
                             a5 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 else if (Shift == 12)
                 {
-                    if (a3 != ' ' || a6 != ' ' || a9 != ' ')
+                    if (oldShift == 9)
+                        continue;
+                    else if (a3 != ' ' && a6 != ' ' && a9 != ' ')
+                        continue;
+                    else if (a3 != ' ' && a6 != ' ' && a9 == ' ')
+                        continue;
+                    else if (a3 != ' ' && a6 == ' ' && a9 == ' ')
+                        continue;
+                    else if (a3 != ' ' || a6 != ' ' || a9 != ' ')
                     {
                         if (a6 != ' ' && a3 == ' ')
                         {
@@ -543,9 +673,13 @@ namespace Project
                             a6 = ' ';
                         }
                         MixShifts++;
+                        oldShift = Shift;
                     }
+                    else
+                        continue;
                 }
                 //Console.Clear();
+                //Console.WriteLine();
                 //Console.WriteLine("--- Mixing Board ---");
                 //Console.WriteLine();
                 //Console.WriteLine("   7  8  9   ");
@@ -557,9 +691,12 @@ namespace Project
                 //Console.WriteLine("3| " + a7 + "  " + a8 + "  " + a9 + " |6");
                 //Console.WriteLine(" +---------+ ");
                 //Console.WriteLine("  10 11 12   ");
+                //Console.WriteLine("Shift move = " + Shift);
+                //Console.Write("Done moves = " + MixShifts);
                 //Thread.Sleep(100);
                 //Console.Clear();
             }
+            //Console.ReadLine();
 
             //---------------------------------------------------------------
             //Target Board Yazdırma
@@ -591,431 +728,2823 @@ namespace Project
 
             while (gamemode == "game")
             {
-
-                //---------------------------------------------------------------
-                //ScoreBoard Hesaplama
-                //---------------------------------------------------------------
-
-                if (aa == a1)
+                while (playerName == "Computer")
                 {
-                    if (a1 == 'A')
-                        BoardScore = BoardScore + 1;
-                    else if (a1 == 'B')
-                        BoardScore = BoardScore + 2;
-                    else if (a1 == 'C')
-                        BoardScore = BoardScore + 3;
-                    else if (a1 == 'D')
-                        BoardScore = BoardScore + 4;
-                    else if (a1 == 'E')
-                        BoardScore = BoardScore + 5;
-                }
-                if (ab == a2)
-                {
-                    if (a2 == 'A')
-                        BoardScore = BoardScore + 2;
-                    else if (a2 == 'B')
-                        BoardScore = BoardScore + 4;
-                    else if (a2 == 'C')
-                        BoardScore = BoardScore + 6;
-                    else if (a2 == 'D')
-                        BoardScore = BoardScore + 8;
-                    else if (a2 == 'E')
-                        BoardScore = BoardScore + 10;
-                }
-                if (ac == a3)
-                {
-                    if (a3 == 'A')
-                        BoardScore = BoardScore + 1;
-                    else if (a3 == 'B')
-                        BoardScore = BoardScore + 2;
-                    else if (a3 == 'C')
-                        BoardScore = BoardScore + 3;
-                    else if (a3 == 'D')
-                        BoardScore = BoardScore + 4;
-                    else if (a3 == 'E')
-                        BoardScore = BoardScore + 5;
-                }
-                if (ba == a4)
-                {
-                    if (a4 == 'A')
-                        BoardScore = BoardScore + 2;
-                    else if (a4 == 'B')
-                        BoardScore = BoardScore + 4;
-                    else if (a4 == 'C')
-                        BoardScore = BoardScore + 6;
-                    else if (a4 == 'D')
-                        BoardScore = BoardScore + 8;
-                    else if (a4 == 'E')
-                        BoardScore = BoardScore + 10;
-                }
-                if (bb == a5)
-                {
-                    if (a5 == 'A')
-                        BoardScore = BoardScore + 4;
-                    else if (a5 == 'B')
-                        BoardScore = BoardScore + 8;
-                    else if (a5 == 'C')
-                        BoardScore = BoardScore + 12;
-                    else if (a5 == 'D')
-                        BoardScore = BoardScore + 16;
-                    else if (a5 == 'E')
-                        BoardScore = BoardScore + 20;
-                }
-                if (bc == a6)
-                {
-                    if (a6 == 'A')
-                        BoardScore = BoardScore + 2;
-                    else if (a6 == 'B')
-                        BoardScore = BoardScore + 4;
-                    else if (a6 == 'C')
-                        BoardScore = BoardScore + 6;
-                    else if (a6 == 'D')
-                        BoardScore = BoardScore + 8;
-                    else if (a6 == 'E')
-                        BoardScore = BoardScore + 10;
-                }
-                if (ca == a7)
-                {
-                    if (a7 == 'A')
-                        BoardScore = BoardScore + 1;
-                    else if (a7 == 'B')
-                        BoardScore = BoardScore + 2;
-                    else if (a7 == 'C')
-                        BoardScore = BoardScore + 3;
-                    else if (a7 == 'D')
-                        BoardScore = BoardScore + 4;
-                    else if (a7 == 'E')
-                        BoardScore = BoardScore + 5;
-                }
-                if (cb == a8)
-                {
-                    if (a8 == 'A')
-                        BoardScore = BoardScore + 2;
-                    else if (a8 == 'B')
-                        BoardScore = BoardScore + 4;
-                    else if (a8 == 'C')
-                        BoardScore = BoardScore + 6;
-                    else if (a8 == 'D')
-                        BoardScore = BoardScore + 8;
-                    else if (a8 == 'E')
-                        BoardScore = BoardScore + 10;
-                }
-                if (cc == a9)
-                {
-                    if (a9 == 'A')
-                        BoardScore = BoardScore + 1;
-                    else if (a9 == 'B')
-                        BoardScore = BoardScore + 2;
-                    else if (a9 == 'C')
-                        BoardScore = BoardScore + 3;
-                    else if (a9 == 'D')
-                        BoardScore = BoardScore + 4;
-                    else if (a9 == 'E')
-                        BoardScore = BoardScore + 5;
-                }
-
-                //---------------------------------------------------------------
-                //Oyun Tahtasını Yazdırma
-                //---------------------------------------------------------------
-
-                Console.SetCursorPosition(0, 18 + ActualNumOfShifts * 12);
-                Console.WriteLine();
-                Console.Write("--- Round ");
-                Console.Write(ActualNumOfShifts + 1);
-                Console.WriteLine(" ---");
-                Console.WriteLine();
-                Console.WriteLine("   7  8  9   ");
-                Console.WriteLine(" +---------+    Board");
-                Console.WriteLine("1| " + a1 + "  " + a2 + "  " + a3 + " |4   Score : " + BoardScore);
-                Console.WriteLine(" |         | ");
-                Console.WriteLine("2| " + a4 + "  " + a5 + "  " + a6 + " |5");
-                Console.WriteLine(" |         | ");
-                Console.WriteLine("3| " + a7 + "  " + a8 + "  " + a9 + " |6   Shift : ");
-                Console.WriteLine(" +---------+ ");
-                Console.WriteLine("  10 11 12   ");
-                Console.SetCursorPosition(24, 27 + ActualNumOfShifts * 12);
-
-                //---------------------------------------------------------------
-                //Oyunun Bitip Bitmediğini Kontrol Etme
-                //---------------------------------------------------------------
-
-                if (a1 == aa && a2 == ab && a3 == ac && a4 == ba && a5 == bb && a6 == bc && a7 == ca && a8 == cb && a9 == cc)
-                {
-                    gamemode = "end";
-                    Console.SetCursorPosition(0, 19 + ActualNumOfShifts * 12);
-                    Console.Write("--- Completed ---");
-                    Console.SetCursorPosition(0, 30 + ActualNumOfShifts * 12);
-                    Console.WriteLine("-------------");
-                    Console.WriteLine("Congratulations! You have finished the game.");
-                    //Console.WriteLine("Calculating your score wait 5 seconds...");
-                    //Thread.Sleep(5000);
-                    int GameScore = (10 * BoardScore) + (NOTOS * NOS * (BoardGenerationShifts - ActualNumOfShifts));
-                    Console.WriteLine("-------------");
-                    Console.WriteLine("Game Score = " + GameScore);
-                    Console.ReadLine();
-                }
-                else
-                {
-
                     //---------------------------------------------------------------
-                    //Hamle Yapma
+                    //ScoreBoard Hesaplama
                     //---------------------------------------------------------------
 
-                    Shift = Convert.ToInt32(Console.ReadLine());
-                    if (Shift == 1)
+                    if (aa == a1)
                     {
-                        if (a1 != ' ' || a2 != ' ' || a3 != ' ')
+                        if (a1 == 'A')
+                            BoardScore = BoardScore + 1;
+                        else if (a1 == 'B')
+                            BoardScore = BoardScore + 2;
+                        else if (a1 == 'C')
+                            BoardScore = BoardScore + 3;
+                        else if (a1 == 'D')
+                            BoardScore = BoardScore + 4;
+                        else if (a1 == 'E')
+                            BoardScore = BoardScore + 5;
+                    }
+                    if (ab == a2)
+                    {
+                        if (a2 == 'A')
+                            BoardScore = BoardScore + 2;
+                        else if (a2 == 'B')
+                            BoardScore = BoardScore + 4;
+                        else if (a2 == 'C')
+                            BoardScore = BoardScore + 6;
+                        else if (a2 == 'D')
+                            BoardScore = BoardScore + 8;
+                        else if (a2 == 'E')
+                            BoardScore = BoardScore + 10;
+                    }
+                    if (ac == a3)
+                    {
+                        if (a3 == 'A')
+                            BoardScore = BoardScore + 1;
+                        else if (a3 == 'B')
+                            BoardScore = BoardScore + 2;
+                        else if (a3 == 'C')
+                            BoardScore = BoardScore + 3;
+                        else if (a3 == 'D')
+                            BoardScore = BoardScore + 4;
+                        else if (a3 == 'E')
+                            BoardScore = BoardScore + 5;
+                    }
+                    if (ba == a4)
+                    {
+                        if (a4 == 'A')
+                            BoardScore = BoardScore + 2;
+                        else if (a4 == 'B')
+                            BoardScore = BoardScore + 4;
+                        else if (a4 == 'C')
+                            BoardScore = BoardScore + 6;
+                        else if (a4 == 'D')
+                            BoardScore = BoardScore + 8;
+                        else if (a4 == 'E')
+                            BoardScore = BoardScore + 10;
+                    }
+                    if (bb == a5)
+                    {
+                        if (a5 == 'A')
+                            BoardScore = BoardScore + 4;
+                        else if (a5 == 'B')
+                            BoardScore = BoardScore + 8;
+                        else if (a5 == 'C')
+                            BoardScore = BoardScore + 12;
+                        else if (a5 == 'D')
+                            BoardScore = BoardScore + 16;
+                        else if (a5 == 'E')
+                            BoardScore = BoardScore + 20;
+                    }
+                    if (bc == a6)
+                    {
+                        if (a6 == 'A')
+                            BoardScore = BoardScore + 2;
+                        else if (a6 == 'B')
+                            BoardScore = BoardScore + 4;
+                        else if (a6 == 'C')
+                            BoardScore = BoardScore + 6;
+                        else if (a6 == 'D')
+                            BoardScore = BoardScore + 8;
+                        else if (a6 == 'E')
+                            BoardScore = BoardScore + 10;
+                    }
+                    if (ca == a7)
+                    {
+                        if (a7 == 'A')
+                            BoardScore = BoardScore + 1;
+                        else if (a7 == 'B')
+                            BoardScore = BoardScore + 2;
+                        else if (a7 == 'C')
+                            BoardScore = BoardScore + 3;
+                        else if (a7 == 'D')
+                            BoardScore = BoardScore + 4;
+                        else if (a7 == 'E')
+                            BoardScore = BoardScore + 5;
+                    }
+                    if (cb == a8)
+                    {
+                        if (a8 == 'A')
+                            BoardScore = BoardScore + 2;
+                        else if (a8 == 'B')
+                            BoardScore = BoardScore + 4;
+                        else if (a8 == 'C')
+                            BoardScore = BoardScore + 6;
+                        else if (a8 == 'D')
+                            BoardScore = BoardScore + 8;
+                        else if (a8 == 'E')
+                            BoardScore = BoardScore + 10;
+                    }
+                    if (cc == a9)
+                    {
+                        if (a9 == 'A')
+                            BoardScore = BoardScore + 1;
+                        else if (a9 == 'B')
+                            BoardScore = BoardScore + 2;
+                        else if (a9 == 'C')
+                            BoardScore = BoardScore + 3;
+                        else if (a9 == 'D')
+                            BoardScore = BoardScore + 4;
+                        else if (a9 == 'E')
+                            BoardScore = BoardScore + 5;
+                    }
+
+                    //---------------------------------------------------------------
+                    //Oyun Tahtasını Yazdırma
+                    //---------------------------------------------------------------
+
+                    Console.SetCursorPosition(0, 18 + ActualNumOfShifts * 12);
+                    Console.WriteLine();
+                    Console.Write("--- Round ");
+                    Console.Write(ActualNumOfShifts + 1);
+                    Console.WriteLine(" ---");
+                    Console.WriteLine();
+                    Console.WriteLine("   7  8  9   ");
+                    Console.WriteLine(" +---------+    Board");
+                    Console.WriteLine("1| " + a1 + "  " + a2 + "  " + a3 + " |4   Score : " + BoardScore);
+                    Console.WriteLine(" |         | ");
+                    Console.WriteLine("2| " + a4 + "  " + a5 + "  " + a6 + " |5");
+                    Console.WriteLine(" |         | ");
+                    Console.WriteLine("3| " + a7 + "  " + a8 + "  " + a9 + " |6   Shift : ");
+                    Console.WriteLine(" +---------+ ");
+                    Console.WriteLine("  10 11 12   ");
+                    Console.SetCursorPosition(24, 27 + ActualNumOfShifts * 12);
+
+                    //---------------------------------------------------------------
+                    //Oyunun Bitip Bitmediğini Kontrol Etme
+                    //---------------------------------------------------------------
+
+                    if (a1 == aa && a2 == ab && a3 == ac && a4 == ba && a5 == bb && a6 == bc && a7 == ca && a8 == cb && a9 == cc)
+                    {
+                        gamemode = "end";
+                        playerName = "end";
+                        Console.SetCursorPosition(0, 19 + ActualNumOfShifts * 12);
+                        Console.Write("--- Completed ---");
+                        Console.SetCursorPosition(0, 30 + ActualNumOfShifts * 12);
+                        Console.WriteLine("-------------");
+                        Console.WriteLine("Congratulations! You have finished the game.");
+                        //Console.WriteLine("Calculating your score wait 5 seconds...");
+                        //Thread.Sleep(5000);
+                        int GameScore = (10 * BoardScore) + (NOTOS * NOS * (BoardGenerationShifts - ActualNumOfShifts));
+                        Console.WriteLine("-------------");
+                        Console.WriteLine("Game Score = " + GameScore);
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        int oldScore = -1;
+                        int MainShift = 0;
+                        //int Shift1 = 5, Shift2 = 3, Shift3 = 9, Shift4 = 4, Shift5 = 1;
+
+
+
+                        //BoardScore = 0;
+
+                        //for (MainShift = 0; MainShift < 5; MainShift++) {
+                        //    if (MainShift == 0) Shift = Shift1;
+                        //    if (MainShift == 1) Shift = Shift2;
+                        //    if (MainShift == 2) Shift = Shift3;
+                        //    if (MainShift == 3) Shift = Shift4;
+                        //    if (MainShift == 4) Shift = Shift5;
+                        for (Shift = 1; Shift < 13; Shift++)
                         {
-                            if (a2 != ' ' && a3 == ' ')
+                            if (Shift == 1)
                             {
-                                a3 = a2;
-                                a2 = ' ';
+                                if (oldShift == 4)
+                                    continue;
+                                else if (a1 != ' ' && a2 != ' ' && a3 != ' ')
+                                    continue;
+                                else if (a1 == ' ' && a2 != ' ' && a3 != ' ')
+                                    continue;
+                                else if (a1 == ' ' && a2 == ' ' && a3 != ' ')
+                                    continue;
+                                else if (a1 != ' ' || a2 != ' ' || a3 != ' ')
+                                {
+                                    char olda1 = a1; char olda2 = a2; char olda3 = a3;
+                                    if (a2 != ' ' && a3 == ' ')
+                                    {
+                                        a3 = a2;
+                                        a2 = ' ';
+                                    }
+                                    if (a1 != ' ' && a2 == ' ')
+                                    {
+                                        a2 = a1;
+                                        a1 = ' ';
+                                    }
+                                    if (a2 != ' ' && a3 == ' ')
+                                    {
+                                        a3 = a2;
+                                        a2 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a1 = olda1; a2 = olda2; a3 = olda3;
+                                }
+                                else
+                                    continue;
                             }
-                            if (a1 != ' ' && a2 == ' ')
+                            else if (Shift == 2)
                             {
-                                a2 = a1;
-                                a1 = ' ';
+                                if (oldShift == 5)
+                                    continue;
+                                else if (a4 != ' ' && a5 != ' ' && a6 != ' ')
+                                    continue;
+                                else if (a4 == ' ' && a5 != ' ' && a6 != ' ')
+                                    continue;
+                                else if (a4 == ' ' && a5 == ' ' && a6 != ' ')
+                                    continue;
+                                else if (a4 != ' ' || a5 != ' ' || a6 != ' ')
+                                {
+                                    char olda4 = a4; char olda5 = a5; char olda6 = a6;
+                                    if (a5 != ' ' && a6 == ' ')
+                                    {
+                                        a6 = a5;
+                                        a5 = ' ';
+                                    }
+                                    if (a4 != ' ' && a5 == ' ')
+                                    {
+                                        a5 = a4;
+                                        a4 = ' ';
+                                    }
+                                    if (a5 != ' ' && a6 == ' ')
+                                    {
+                                        a6 = a5;
+                                        a5 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a4 = olda4; a5 = olda5; a6 = olda6;
+                                }
+                                else
+                                    continue;
                             }
-                            if (a2 != ' ' && a3 == ' ')
+                            else if (Shift == 3)
                             {
-                                a3 = a2;
-                                a2 = ' ';
+                                if (oldShift == 6)
+                                    continue;
+                                else if (a7 != ' ' && a8 != ' ' && a9 != ' ')
+                                    continue;
+                                else if (a7 == ' ' && a8 != ' ' && a9 != ' ')
+                                    continue;
+                                else if (a7 == ' ' && a8 == ' ' && a9 != ' ')
+                                    continue;
+                                else if (a7 != ' ' || a8 != ' ' || a9 != ' ')
+                                {
+                                    char olda7 = a7; char olda8 = a8; char olda9 = a9;
+                                    if (a8 != ' ' && a9 == ' ')
+                                    {
+                                        a9 = a8;
+                                        a8 = ' ';
+                                    }
+                                    if (a7 != ' ' && a8 == ' ')
+                                    {
+                                        a8 = a7;
+                                        a7 = ' ';
+                                    }
+                                    if (a8 != ' ' && a9 == ' ')
+                                    {
+                                        a9 = a8;
+                                        a8 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a7 = olda7; a8 = olda8; a9 = olda9;
+                                }
+                                else
+                                    continue;
+                            }
+                            else if (Shift == 4)
+                            {
+                                if (oldShift == 1)
+                                    continue;
+                                else if (a1 != ' ' && a2 != ' ' && a3 != ' ')
+                                    continue;
+                                else if (a1 != ' ' && a2 != ' ' && a3 == ' ')
+                                    continue;
+                                else if (a1 != ' ' && a2 == ' ' && a3 == ' ')
+                                    continue;
+                                else if (a1 != ' ' || a2 != ' ' || a3 != ' ')
+                                {
+                                    char olda1 = a1; char olda2 = a2; char olda3 = a3;
+                                    if (a2 != ' ' && a1 == ' ')
+                                    {
+                                        a1 = a2;
+                                        a2 = ' ';
+                                    }
+                                    if (a3 != ' ' && a2 == ' ')
+                                    {
+                                        a2 = a3;
+                                        a3 = ' ';
+                                    }
+                                    if (a2 != ' ' && a1 == ' ')
+                                    {
+                                        a1 = a2;
+                                        a2 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a1 = olda1; a2 = olda2; a3 = olda3;
+                                }
+                                else
+                                    continue;
+                            }
+                            else if (Shift == 5)
+                            {
+                                if (oldShift == 2)
+                                    continue;
+                                else if (a4 != ' ' && a5 != ' ' && a6 != ' ')
+                                    continue;
+                                else if (a4 != ' ' && a5 != ' ' && a6 == ' ')
+                                    continue;
+                                else if (a4 != ' ' && a5 == ' ' && a6 == ' ')
+                                    continue;
+                                else if (a4 != ' ' || a5 != ' ' || a6 != ' ')
+                                {
+                                    char olda4 = a4; char olda5 = a5; char olda6 = a6;
+                                    if (a5 != ' ' && a4 == ' ')
+                                    {
+                                        a4 = a5;
+                                        a5 = ' ';
+                                    }
+                                    if (a6 != ' ' && a5 == ' ')
+                                    {
+                                        a5 = a6;
+                                        a6 = ' ';
+                                    }
+                                    if (a5 != ' ' && a4 == ' ')
+                                    {
+                                        a4 = a5;
+                                        a5 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a4 = olda4; a5 = olda5; a6 = olda6;
+                                }
+                                else
+                                    continue;
+                            }
+                            else if (Shift == 6)
+                            {
+                                if (oldShift == 3)
+                                    continue;
+                                else if (a7 != ' ' && a8 != ' ' && a9 != ' ')
+                                    continue;
+                                else if (a7 != ' ' && a8 != ' ' && a9 == ' ')
+                                    continue;
+                                else if (a7 != ' ' && a8 == ' ' && a9 == ' ')
+                                    continue;
+                                else if (a7 != ' ' || a8 != ' ' || a9 != ' ')
+                                {
+                                    char olda7 = a7; char olda8 = a8; char olda9 = a9;
+                                    if (a8 != ' ' && a7 == ' ')
+                                    {
+                                        a7 = a8;
+                                        a8 = ' ';
+                                    }
+                                    if (a9 != ' ' && a8 == ' ')
+                                    {
+                                        a8 = a9;
+                                        a9 = ' ';
+                                    }
+                                    if (a8 != ' ' && a7 == ' ')
+                                    {
+                                        a7 = a8;
+                                        a8 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a7 = olda7; a8 = olda8; a9 = olda9;
+                                }
+                                else
+                                    continue;
+                            }
+                            else if (Shift == 7)
+                            {
+                                if (oldShift == 10)
+                                    continue;
+                                else if (a1 != ' ' && a4 != ' ' && a7 != ' ')
+                                    continue;
+                                else if (a1 == ' ' && a4 != ' ' && a7 != ' ')
+                                    continue;
+                                else if (a1 == ' ' && a4 == ' ' && a7 != ' ')
+                                    continue;
+                                else if (a1 != ' ' || a4 != ' ' || a7 != ' ')
+                                {
+                                    char olda1 = a1; char olda4 = a4; char olda7 = a7;
+                                    if (a4 != ' ' && a7 == ' ')
+                                    {
+                                        a7 = a4;
+                                        a4 = ' ';
+                                    }
+                                    if (a1 != ' ' && a4 == ' ')
+                                    {
+                                        a4 = a1;
+                                        a1 = ' ';
+                                    }
+                                    if (a4 != ' ' && a7 == ' ')
+                                    {
+                                        a7 = a4;
+                                        a4 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a1 = olda1; a4 = olda4; a7 = olda7;
+                                }
+                                else
+                                    continue;
+                            }
+                            else if (Shift == 8)
+                            {
+                                if (oldShift == 11)
+                                    continue;
+                                else if (a2 != ' ' && a5 != ' ' && a8 != ' ')
+                                    continue;
+                                else if (a2 == ' ' && a5 != ' ' && a8 != ' ')
+                                    continue;
+                                else if (a2 == ' ' && a5 == ' ' && a8 != ' ')
+                                    continue;
+                                else if (a2 != ' ' || a5 != ' ' || a8 != ' ')
+                                {
+                                    char olda2 = a2; char olda5 = a5; char olda8 = a8;
+                                    if (a5 != ' ' && a8 == ' ')
+                                    {
+                                        a8 = a5;
+                                        a5 = ' ';
+                                    }
+                                    if (a2 != ' ' && a5 == ' ')
+                                    {
+                                        a5 = a2;
+                                        a2 = ' ';
+                                    }
+                                    if (a5 != ' ' && a8 == ' ')
+                                    {
+                                        a8 = a5;
+                                        a5 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a2 = olda2; a5 = olda5; a8 = olda8;
+                                }
+                                else
+                                    continue;
+                            }
+                            else if (Shift == 9)
+                            {
+                                if (oldShift == 12)
+                                    continue;
+                                else if (a3 != ' ' && a6 != ' ' && a9 != ' ')
+                                    continue;
+                                else if (a3 == ' ' && a6 != ' ' && a9 != ' ')
+                                    continue;
+                                else if (a3 == ' ' && a6 == ' ' && a9 != ' ')
+                                    continue;
+                                else if (a3 != ' ' || a6 != ' ' || a9 != ' ')
+                                {
+                                    char olda3 = a3; char olda6 = a6; char olda9 = a9;
+                                    if (a6 != ' ' && a9 == ' ')
+                                    {
+                                        a9 = a6;
+                                        a6 = ' ';
+                                    }
+                                    if (a3 != ' ' && a6 == ' ')
+                                    {
+                                        a6 = a3;
+                                        a3 = ' ';
+                                    }
+                                    if (a6 != ' ' && a9 == ' ')
+                                    {
+                                        a9 = a6;
+                                        a6 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a3 = olda3; a6 = olda6; a9 = olda9;
+                                }
+                                else
+                                    continue;
+                            }
+                            else if (Shift == 10)
+                            {
+                                if (oldShift == 7)
+                                    continue;
+                                else if (a1 != ' ' && a4 != ' ' && a7 != ' ')
+                                    continue;
+                                else if (a1 != ' ' && a4 != ' ' && a7 == ' ')
+                                    continue;
+                                else if (a1 != ' ' && a4 == ' ' && a7 == ' ')
+                                    continue;
+                                else if (a1 != ' ' || a4 != ' ' || a7 != ' ')
+                                {
+                                    char olda1 = a1; char olda4 = a4; char olda7 = a7;
+                                    if (a4 != ' ' && a1 == ' ')
+                                    {
+                                        a1 = a4;
+                                        a4 = ' ';
+                                    }
+                                    if (a7 != ' ' && a4 == ' ')
+                                    {
+                                        a4 = a7;
+                                        a7 = ' ';
+                                    }
+                                    if (a4 != ' ' && a1 == ' ')
+                                    {
+                                        a1 = a4;
+                                        a4 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a1 = olda1; a4 = olda4; a7 = olda7;
+                                }
+                                else
+                                    continue;
+                            }
+                            else if (Shift == 11)
+                            {
+                                if (oldShift == 8)
+                                    continue;
+                                else if (a2 != ' ' && a5 != ' ' && a8 != ' ')
+                                    continue;
+                                else if (a2 != ' ' && a5 != ' ' && a8 == ' ')
+                                    continue;
+                                else if (a2 != ' ' && a5 == ' ' && a8 == ' ')
+                                    continue;
+                                else if (a2 != ' ' || a5 != ' ' || a8 != ' ')
+                                {
+                                    char olda2 = a2; char olda5 = a5; char olda8 = a8;
+                                    if (a5 != ' ' && a2 == ' ')
+                                    {
+                                        a2 = a5;
+                                        a5 = ' ';
+                                    }
+                                    if (a8 != ' ' && a5 == ' ')
+                                    {
+                                        a5 = a8;
+                                        a8 = ' ';
+                                    }
+                                    if (a5 != ' ' && a2 == ' ')
+                                    {
+                                        a2 = a5;
+                                        a5 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a2 = olda2; a5 = olda5; a8 = olda8;
+                                }
+                                else
+                                    continue;
+                            }
+                            else if (Shift == 12)
+                            {
+                                if (oldShift == 9)
+                                    continue;
+                                else if (a3 != ' ' && a6 != ' ' && a9 != ' ')
+                                    continue;
+                                else if (a3 != ' ' && a6 != ' ' && a9 == ' ')
+                                    continue;
+                                else if (a3 != ' ' && a6 == ' ' && a9 == ' ')
+                                    continue;
+                                else if (a3 != ' ' || a6 != ' ' || a9 != ' ')
+                                {
+                                    char olda3 = a3; char olda6 = a6; char olda9 = a9;
+                                    if (a6 != ' ' && a3 == ' ')
+                                    {
+                                        a3 = a6;
+                                        a6 = ' ';
+                                    }
+                                    if (a9 != ' ' && a6 == ' ')
+                                    {
+                                        a6 = a9;
+                                        a9 = ' ';
+                                    }
+                                    if (a6 != ' ' && a3 == ' ')
+                                    {
+                                        a3 = a6;
+                                        a6 = ' ';
+                                    }
+                                    if (aa == a1)
+                                    {
+                                        if (a1 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a1 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a1 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a1 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a1 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ab == a2)
+                                    {
+                                        if (a2 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a2 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a2 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a2 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a2 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ac == a3)
+                                    {
+                                        if (a3 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a3 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a3 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a3 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a3 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (ba == a4)
+                                    {
+                                        if (a4 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a4 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a4 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a4 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a4 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (bb == a5)
+                                    {
+                                        if (a5 == 'A')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a5 == 'B')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a5 == 'C')
+                                            BoardScore = BoardScore + 12;
+                                        else if (a5 == 'D')
+                                            BoardScore = BoardScore + 16;
+                                        else if (a5 == 'E')
+                                            BoardScore = BoardScore + 20;
+                                    }
+                                    if (bc == a6)
+                                    {
+                                        if (a6 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a6 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a6 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a6 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a6 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (ca == a7)
+                                    {
+                                        if (a7 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a7 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a7 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a7 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a7 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (cb == a8)
+                                    {
+                                        if (a8 == 'A')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a8 == 'B')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a8 == 'C')
+                                            BoardScore = BoardScore + 6;
+                                        else if (a8 == 'D')
+                                            BoardScore = BoardScore + 8;
+                                        else if (a8 == 'E')
+                                            BoardScore = BoardScore + 10;
+                                    }
+                                    if (cc == a9)
+                                    {
+                                        if (a9 == 'A')
+                                            BoardScore = BoardScore + 1;
+                                        else if (a9 == 'B')
+                                            BoardScore = BoardScore + 2;
+                                        else if (a9 == 'C')
+                                            BoardScore = BoardScore + 3;
+                                        else if (a9 == 'D')
+                                            BoardScore = BoardScore + 4;
+                                        else if (a9 == 'E')
+                                            BoardScore = BoardScore + 5;
+                                    }
+                                    if (oldScore < BoardScore)
+                                    {
+                                        oldScore = BoardScore;
+                                        MainShift = Shift;
+                                    }
+                                    else if (oldScore == BoardScore)
+                                    {
+                                        int select = rand.Next(1, 3);
+                                        if (select == 1)
+                                            MainShift = Shift;
+                                    }
+                                    BoardScore = 0;
+                                    a3 = olda3; a6 = olda6; a9 = olda9;
+                                }
+                                else
+                                    continue;
                             }
                         }
-                    }
-                    else if (Shift == 2)
-                    {
-                        if (a4 != ' ' || a5 != ' ' || a6 != ' ')
+                        //Thread.Sleep(2000);
+                        Console.ReadLine();
+                        Shift = MainShift;
+                        Console.Write(Shift);
+                        if (Shift == 1)
                         {
-                            if (a5 != ' ' && a6 == ' ')
+                            if (a1 != ' ' || a2 != ' ' || a3 != ' ')
                             {
-                                a6 = a5;
-                                a5 = ' ';
-                            }
-                            if (a4 != ' ' && a5 == ' ')
-                            {
-                                a5 = a4;
-                                a4 = ' ';
-                            }
-                            if (a5 != ' ' && a6 == ' ')
-                            {
-                                a6 = a5;
-                                a5 = ' ';
+                                if (a2 != ' ' && a3 == ' ')
+                                {
+                                    a3 = a2;
+                                    a2 = ' ';
+                                }
+                                if (a1 != ' ' && a2 == ' ')
+                                {
+                                    a2 = a1;
+                                    a1 = ' ';
+                                }
+                                if (a2 != ' ' && a3 == ' ')
+                                {
+                                    a3 = a2;
+                                    a2 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 3)
-                    {
-                        if (a7 != ' ' || a8 != ' ' || a9 != ' ')
+                        else if (Shift == 2)
                         {
-                            if (a8 != ' ' && a9 == ' ')
+                            if (a4 != ' ' || a5 != ' ' || a6 != ' ')
                             {
-                                a9 = a8;
-                                a8 = ' ';
-                            }
-                            if (a7 != ' ' && a8 == ' ')
-                            {
-                                a8 = a7;
-                                a7 = ' ';
-                            }
-                            if (a8 != ' ' && a9 == ' ')
-                            {
-                                a9 = a8;
-                                a8 = ' ';
+                                if (a5 != ' ' && a6 == ' ')
+                                {
+                                    a6 = a5;
+                                    a5 = ' ';
+                                }
+                                if (a4 != ' ' && a5 == ' ')
+                                {
+                                    a5 = a4;
+                                    a4 = ' ';
+                                }
+                                if (a5 != ' ' && a6 == ' ')
+                                {
+                                    a6 = a5;
+                                    a5 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 4)
-                    {
-                        if (a1 != ' ' || a2 != ' ' || a3 != ' ')
+                        else if (Shift == 3)
                         {
-                            if (a2 != ' ' && a1 == ' ')
+                            if (a7 != ' ' || a8 != ' ' || a9 != ' ')
                             {
-                                a1 = a2;
-                                a2 = ' ';
-                            }
-                            if (a3 != ' ' && a2 == ' ')
-                            {
-                                a2 = a3;
-                                a3 = ' ';
-                            }
-                            if (a2 != ' ' && a1 == ' ')
-                            {
-                                a1 = a2;
-                                a2 = ' ';
+                                if (a8 != ' ' && a9 == ' ')
+                                {
+                                    a9 = a8;
+                                    a8 = ' ';
+                                }
+                                if (a7 != ' ' && a8 == ' ')
+                                {
+                                    a8 = a7;
+                                    a7 = ' ';
+                                }
+                                if (a8 != ' ' && a9 == ' ')
+                                {
+                                    a9 = a8;
+                                    a8 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 5)
-                    {
-                        if (a4 != ' ' || a5 != ' ' || a6 != ' ')
+                        else if (Shift == 4)
                         {
-                            if (a5 != ' ' && a4 == ' ')
+                            if (a1 != ' ' || a2 != ' ' || a3 != ' ')
                             {
-                                a4 = a5;
-                                a5 = ' ';
-                            }
-                            if (a6 != ' ' && a5 == ' ')
-                            {
-                                a5 = a6;
-                                a6 = ' ';
-                            }
-                            if (a5 != ' ' && a4 == ' ')
-                            {
-                                a4 = a5;
-                                a5 = ' ';
+                                if (a2 != ' ' && a1 == ' ')
+                                {
+                                    a1 = a2;
+                                    a2 = ' ';
+                                }
+                                if (a3 != ' ' && a2 == ' ')
+                                {
+                                    a2 = a3;
+                                    a3 = ' ';
+                                }
+                                if (a2 != ' ' && a1 == ' ')
+                                {
+                                    a1 = a2;
+                                    a2 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 6)
-                    {
-                        if (a7 != ' ' || a8 != ' ' || a9 != ' ')
+                        else if (Shift == 5)
                         {
-                            if (a8 != ' ' && a7 == ' ')
+                            if (a4 != ' ' || a5 != ' ' || a6 != ' ')
                             {
-                                a7 = a8;
-                                a8 = ' ';
-                            }
-                            if (a9 != ' ' && a8 == ' ')
-                            {
-                                a8 = a9;
-                                a9 = ' ';
-                            }
-                            if (a8 != ' ' && a7 == ' ')
-                            {
-                                a7 = a8;
-                                a8 = ' ';
+                                if (a5 != ' ' && a4 == ' ')
+                                {
+                                    a4 = a5;
+                                    a5 = ' ';
+                                }
+                                if (a6 != ' ' && a5 == ' ')
+                                {
+                                    a5 = a6;
+                                    a6 = ' ';
+                                }
+                                if (a5 != ' ' && a4 == ' ')
+                                {
+                                    a4 = a5;
+                                    a5 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 7)
-                    {
-                        if (a1 != ' ' || a4 != ' ' || a7 != ' ')
+                        else if (Shift == 6)
                         {
-                            if (a4 != ' ' && a7 == ' ')
+                            if (a7 != ' ' || a8 != ' ' || a9 != ' ')
                             {
-                                a7 = a4;
-                                a4 = ' ';
-                            }
-                            if (a1 != ' ' && a4 == ' ')
-                            {
-                                a4 = a1;
-                                a1 = ' ';
-                            }
-                            if (a4 != ' ' && a7 == ' ')
-                            {
-                                a7 = a4;
-                                a4 = ' ';
+                                if (a8 != ' ' && a7 == ' ')
+                                {
+                                    a7 = a8;
+                                    a8 = ' ';
+                                }
+                                if (a9 != ' ' && a8 == ' ')
+                                {
+                                    a8 = a9;
+                                    a9 = ' ';
+                                }
+                                if (a8 != ' ' && a7 == ' ')
+                                {
+                                    a7 = a8;
+                                    a8 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 8)
-                    {
-                        if (a2 != ' ' || a5 != ' ' || a8 != ' ')
+                        else if (Shift == 7)
                         {
-                            if (a5 != ' ' && a8 == ' ')
+                            if (a1 != ' ' || a4 != ' ' || a7 != ' ')
                             {
-                                a8 = a5;
-                                a5 = ' ';
-                            }
-                            if (a2 != ' ' && a5 == ' ')
-                            {
-                                a5 = a2;
-                                a2 = ' ';
-                            }
-                            if (a5 != ' ' && a8 == ' ')
-                            {
-                                a8 = a5;
-                                a5 = ' ';
+                                if (a4 != ' ' && a7 == ' ')
+                                {
+                                    a7 = a4;
+                                    a4 = ' ';
+                                }
+                                if (a1 != ' ' && a4 == ' ')
+                                {
+                                    a4 = a1;
+                                    a1 = ' ';
+                                }
+                                if (a4 != ' ' && a7 == ' ')
+                                {
+                                    a7 = a4;
+                                    a4 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 9)
-                    {
-                        if (a3 != ' ' || a6 != ' ' || a9 != ' ')
+                        else if (Shift == 8)
                         {
-                            if (a6 != ' ' && a9 == ' ')
+                            if (a2 != ' ' || a5 != ' ' || a8 != ' ')
                             {
-                                a9 = a6;
-                                a6 = ' ';
-                            }
-                            if (a3 != ' ' && a6 == ' ')
-                            {
-                                a6 = a3;
-                                a3 = ' ';
-                            }
-                            if (a6 != ' ' && a9 == ' ')
-                            {
-                                a9 = a6;
-                                a6 = ' ';
+                                if (a5 != ' ' && a8 == ' ')
+                                {
+                                    a8 = a5;
+                                    a5 = ' ';
+                                }
+                                if (a2 != ' ' && a5 == ' ')
+                                {
+                                    a5 = a2;
+                                    a2 = ' ';
+                                }
+                                if (a5 != ' ' && a8 == ' ')
+                                {
+                                    a8 = a5;
+                                    a5 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 10)
-                    {
-                        if (a1 != ' ' || a4 != ' ' || a7 != ' ')
+                        else if (Shift == 9)
                         {
-                            if (a4 != ' ' && a1 == ' ')
+                            if (a3 != ' ' || a6 != ' ' || a9 != ' ')
                             {
-                                a1 = a4;
-                                a4 = ' ';
-                            }
-                            if (a7 != ' ' && a4 == ' ')
-                            {
-                                a4 = a7;
-                                a7 = ' ';
-                            }
-                            if (a4 != ' ' && a1 == ' ')
-                            {
-                                a1 = a4;
-                                a4 = ' ';
+                                if (a6 != ' ' && a9 == ' ')
+                                {
+                                    a9 = a6;
+                                    a6 = ' ';
+                                }
+                                if (a3 != ' ' && a6 == ' ')
+                                {
+                                    a6 = a3;
+                                    a3 = ' ';
+                                }
+                                if (a6 != ' ' && a9 == ' ')
+                                {
+                                    a9 = a6;
+                                    a6 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 11)
-                    {
-                        if (a2 != ' ' || a5 != ' ' || a8 != ' ')
+                        else if (Shift == 10)
                         {
-                            if (a5 != ' ' && a2 == ' ')
+                            if (a1 != ' ' || a4 != ' ' || a7 != ' ')
                             {
-                                a2 = a5;
-                                a5 = ' ';
-                            }
-                            if (a8 != ' ' && a5 == ' ')
-                            {
-                                a5 = a8;
-                                a8 = ' ';
-                            }
-                            if (a5 != ' ' && a2 == ' ')
-                            {
-                                a2 = a5;
-                                a5 = ' ';
+                                if (a4 != ' ' && a1 == ' ')
+                                {
+                                    a1 = a4;
+                                    a4 = ' ';
+                                }
+                                if (a7 != ' ' && a4 == ' ')
+                                {
+                                    a4 = a7;
+                                    a7 = ' ';
+                                }
+                                if (a4 != ' ' && a1 == ' ')
+                                {
+                                    a1 = a4;
+                                    a4 = ' ';
+                                }
                             }
                         }
-                    }
-                    else if (Shift == 12)
-                    {
-                        if (a3 != ' ' || a6 != ' ' || a9 != ' ')
+                        else if (Shift == 11)
                         {
-                            if (a6 != ' ' && a3 == ' ')
+                            if (a2 != ' ' || a5 != ' ' || a8 != ' ')
                             {
-                                a3 = a6;
-                                a6 = ' ';
-                            }
-                            if (a9 != ' ' && a6 == ' ')
-                            {
-                                a6 = a9;
-                                a9 = ' ';
-                            }
-                            if (a6 != ' ' && a3 == ' ')
-                            {
-                                a3 = a6;
-                                a6 = ' ';
+                                if (a5 != ' ' && a2 == ' ')
+                                {
+                                    a2 = a5;
+                                    a5 = ' ';
+                                }
+                                if (a8 != ' ' && a5 == ' ')
+                                {
+                                    a5 = a8;
+                                    a8 = ' ';
+                                }
+                                if (a5 != ' ' && a2 == ' ')
+                                {
+                                    a2 = a5;
+                                    a5 = ' ';
+                                }
                             }
                         }
+                        else if (Shift == 12)
+                        {
+                            if (a3 != ' ' || a6 != ' ' || a9 != ' ')
+                            {
+                                if (a6 != ' ' && a3 == ' ')
+                                {
+                                    a3 = a6;
+                                    a6 = ' ';
+                                }
+                                if (a9 != ' ' && a6 == ' ')
+                                {
+                                    a6 = a9;
+                                    a9 = ' ';
+                                }
+                                if (a6 != ' ' && a3 == ' ')
+                                {
+                                    a3 = a6;
+                                    a6 = ' ';
+                                }
+                            }
+                        }
+                        BoardScore = 0;
+                        ActualNumOfShifts++;
+                        oldShift = Shift;
                     }
-                    BoardScore = 0;
-                    ActualNumOfShifts++;
+                }
+                while (playerName == "Human")
+                {
+                    //---------------------------------------------------------------
+                    //ScoreBoard Hesaplama
+                    //---------------------------------------------------------------
+
+                    if (aa == a1)
+                    {
+                        if (a1 == 'A')
+                            BoardScore = BoardScore + 1;
+                        else if (a1 == 'B')
+                            BoardScore = BoardScore + 2;
+                        else if (a1 == 'C')
+                            BoardScore = BoardScore + 3;
+                        else if (a1 == 'D')
+                            BoardScore = BoardScore + 4;
+                        else if (a1 == 'E')
+                            BoardScore = BoardScore + 5;
+                    }
+                    if (ab == a2)
+                    {
+                        if (a2 == 'A')
+                            BoardScore = BoardScore + 2;
+                        else if (a2 == 'B')
+                            BoardScore = BoardScore + 4;
+                        else if (a2 == 'C')
+                            BoardScore = BoardScore + 6;
+                        else if (a2 == 'D')
+                            BoardScore = BoardScore + 8;
+                        else if (a2 == 'E')
+                            BoardScore = BoardScore + 10;
+                    }
+                    if (ac == a3)
+                    {
+                        if (a3 == 'A')
+                            BoardScore = BoardScore + 1;
+                        else if (a3 == 'B')
+                            BoardScore = BoardScore + 2;
+                        else if (a3 == 'C')
+                            BoardScore = BoardScore + 3;
+                        else if (a3 == 'D')
+                            BoardScore = BoardScore + 4;
+                        else if (a3 == 'E')
+                            BoardScore = BoardScore + 5;
+                    }
+                    if (ba == a4)
+                    {
+                        if (a4 == 'A')
+                            BoardScore = BoardScore + 2;
+                        else if (a4 == 'B')
+                            BoardScore = BoardScore + 4;
+                        else if (a4 == 'C')
+                            BoardScore = BoardScore + 6;
+                        else if (a4 == 'D')
+                            BoardScore = BoardScore + 8;
+                        else if (a4 == 'E')
+                            BoardScore = BoardScore + 10;
+                    }
+                    if (bb == a5)
+                    {
+                        if (a5 == 'A')
+                            BoardScore = BoardScore + 4;
+                        else if (a5 == 'B')
+                            BoardScore = BoardScore + 8;
+                        else if (a5 == 'C')
+                            BoardScore = BoardScore + 12;
+                        else if (a5 == 'D')
+                            BoardScore = BoardScore + 16;
+                        else if (a5 == 'E')
+                            BoardScore = BoardScore + 20;
+                    }
+                    if (bc == a6)
+                    {
+                        if (a6 == 'A')
+                            BoardScore = BoardScore + 2;
+                        else if (a6 == 'B')
+                            BoardScore = BoardScore + 4;
+                        else if (a6 == 'C')
+                            BoardScore = BoardScore + 6;
+                        else if (a6 == 'D')
+                            BoardScore = BoardScore + 8;
+                        else if (a6 == 'E')
+                            BoardScore = BoardScore + 10;
+                    }
+                    if (ca == a7)
+                    {
+                        if (a7 == 'A')
+                            BoardScore = BoardScore + 1;
+                        else if (a7 == 'B')
+                            BoardScore = BoardScore + 2;
+                        else if (a7 == 'C')
+                            BoardScore = BoardScore + 3;
+                        else if (a7 == 'D')
+                            BoardScore = BoardScore + 4;
+                        else if (a7 == 'E')
+                            BoardScore = BoardScore + 5;
+                    }
+                    if (cb == a8)
+                    {
+                        if (a8 == 'A')
+                            BoardScore = BoardScore + 2;
+                        else if (a8 == 'B')
+                            BoardScore = BoardScore + 4;
+                        else if (a8 == 'C')
+                            BoardScore = BoardScore + 6;
+                        else if (a8 == 'D')
+                            BoardScore = BoardScore + 8;
+                        else if (a8 == 'E')
+                            BoardScore = BoardScore + 10;
+                    }
+                    if (cc == a9)
+                    {
+                        if (a9 == 'A')
+                            BoardScore = BoardScore + 1;
+                        else if (a9 == 'B')
+                            BoardScore = BoardScore + 2;
+                        else if (a9 == 'C')
+                            BoardScore = BoardScore + 3;
+                        else if (a9 == 'D')
+                            BoardScore = BoardScore + 4;
+                        else if (a9 == 'E')
+                            BoardScore = BoardScore + 5;
+                    }
+
+                    //---------------------------------------------------------------
+                    //Oyun Tahtasını Yazdırma
+                    //---------------------------------------------------------------
+
+                    Console.SetCursorPosition(0, 18 + ActualNumOfShifts * 12);
+                    Console.WriteLine();
+                    Console.Write("--- Round ");
+                    Console.Write(ActualNumOfShifts + 1);
+                    Console.WriteLine(" ---");
+                    Console.WriteLine();
+                    Console.WriteLine("   7  8  9   ");
+                    Console.WriteLine(" +---------+    Board");
+                    Console.WriteLine("1| " + a1 + "  " + a2 + "  " + a3 + " |4   Score : " + BoardScore);
+                    Console.WriteLine(" |         | ");
+                    Console.WriteLine("2| " + a4 + "  " + a5 + "  " + a6 + " |5");
+                    Console.WriteLine(" |         | ");
+                    Console.WriteLine("3| " + a7 + "  " + a8 + "  " + a9 + " |6   Shift : ");
+                    Console.WriteLine(" +---------+ ");
+                    Console.WriteLine("  10 11 12   ");
+                    Console.SetCursorPosition(24, 27 + ActualNumOfShifts * 12);
+
+                    //---------------------------------------------------------------
+                    //Oyunun Bitip Bitmediğini Kontrol Etme
+                    //---------------------------------------------------------------
+
+                    if (a1 == aa && a2 == ab && a3 == ac && a4 == ba && a5 == bb && a6 == bc && a7 == ca && a8 == cb && a9 == cc)
+                    {
+                        gamemode = "end";
+                        playerName = "end";
+                        Console.SetCursorPosition(0, 19 + ActualNumOfShifts * 12);
+                        Console.Write("--- Completed ---");
+                        Console.SetCursorPosition(0, 30 + ActualNumOfShifts * 12);
+                        Console.WriteLine("-------------");
+                        Console.WriteLine("Congratulations! You have finished the game.");
+                        //Console.WriteLine("Calculating your score wait 5 seconds...");
+                        //Thread.Sleep(5000);
+                        int GameScore = (10 * BoardScore) + (NOTOS * NOS * (BoardGenerationShifts - ActualNumOfShifts));
+                        Console.WriteLine("-------------");
+                        Console.WriteLine("Game Score = " + GameScore);
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+
+                        //---------------------------------------------------------------
+                        //Hamle Yapma
+                        //---------------------------------------------------------------
+
+                        Shift = Convert.ToInt32(Console.ReadLine());
+                        if (Shift == 1)
+                        {
+                            if (a1 != ' ' || a2 != ' ' || a3 != ' ')
+                            {
+                                if (a2 != ' ' && a3 == ' ')
+                                {
+                                    a3 = a2;
+                                    a2 = ' ';
+                                }
+                                if (a1 != ' ' && a2 == ' ')
+                                {
+                                    a2 = a1;
+                                    a1 = ' ';
+                                }
+                                if (a2 != ' ' && a3 == ' ')
+                                {
+                                    a3 = a2;
+                                    a2 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 2)
+                        {
+                            if (a4 != ' ' || a5 != ' ' || a6 != ' ')
+                            {
+                                if (a5 != ' ' && a6 == ' ')
+                                {
+                                    a6 = a5;
+                                    a5 = ' ';
+                                }
+                                if (a4 != ' ' && a5 == ' ')
+                                {
+                                    a5 = a4;
+                                    a4 = ' ';
+                                }
+                                if (a5 != ' ' && a6 == ' ')
+                                {
+                                    a6 = a5;
+                                    a5 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 3)
+                        {
+                            if (a7 != ' ' || a8 != ' ' || a9 != ' ')
+                            {
+                                if (a8 != ' ' && a9 == ' ')
+                                {
+                                    a9 = a8;
+                                    a8 = ' ';
+                                }
+                                if (a7 != ' ' && a8 == ' ')
+                                {
+                                    a8 = a7;
+                                    a7 = ' ';
+                                }
+                                if (a8 != ' ' && a9 == ' ')
+                                {
+                                    a9 = a8;
+                                    a8 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 4)
+                        {
+                            if (a1 != ' ' || a2 != ' ' || a3 != ' ')
+                            {
+                                if (a2 != ' ' && a1 == ' ')
+                                {
+                                    a1 = a2;
+                                    a2 = ' ';
+                                }
+                                if (a3 != ' ' && a2 == ' ')
+                                {
+                                    a2 = a3;
+                                    a3 = ' ';
+                                }
+                                if (a2 != ' ' && a1 == ' ')
+                                {
+                                    a1 = a2;
+                                    a2 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 5)
+                        {
+                            if (a4 != ' ' || a5 != ' ' || a6 != ' ')
+                            {
+                                if (a5 != ' ' && a4 == ' ')
+                                {
+                                    a4 = a5;
+                                    a5 = ' ';
+                                }
+                                if (a6 != ' ' && a5 == ' ')
+                                {
+                                    a5 = a6;
+                                    a6 = ' ';
+                                }
+                                if (a5 != ' ' && a4 == ' ')
+                                {
+                                    a4 = a5;
+                                    a5 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 6)
+                        {
+                            if (a7 != ' ' || a8 != ' ' || a9 != ' ')
+                            {
+                                if (a8 != ' ' && a7 == ' ')
+                                {
+                                    a7 = a8;
+                                    a8 = ' ';
+                                }
+                                if (a9 != ' ' && a8 == ' ')
+                                {
+                                    a8 = a9;
+                                    a9 = ' ';
+                                }
+                                if (a8 != ' ' && a7 == ' ')
+                                {
+                                    a7 = a8;
+                                    a8 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 7)
+                        {
+                            if (a1 != ' ' || a4 != ' ' || a7 != ' ')
+                            {
+                                if (a4 != ' ' && a7 == ' ')
+                                {
+                                    a7 = a4;
+                                    a4 = ' ';
+                                }
+                                if (a1 != ' ' && a4 == ' ')
+                                {
+                                    a4 = a1;
+                                    a1 = ' ';
+                                }
+                                if (a4 != ' ' && a7 == ' ')
+                                {
+                                    a7 = a4;
+                                    a4 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 8)
+                        {
+                            if (a2 != ' ' || a5 != ' ' || a8 != ' ')
+                            {
+                                if (a5 != ' ' && a8 == ' ')
+                                {
+                                    a8 = a5;
+                                    a5 = ' ';
+                                }
+                                if (a2 != ' ' && a5 == ' ')
+                                {
+                                    a5 = a2;
+                                    a2 = ' ';
+                                }
+                                if (a5 != ' ' && a8 == ' ')
+                                {
+                                    a8 = a5;
+                                    a5 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 9)
+                        {
+                            if (a3 != ' ' || a6 != ' ' || a9 != ' ')
+                            {
+                                if (a6 != ' ' && a9 == ' ')
+                                {
+                                    a9 = a6;
+                                    a6 = ' ';
+                                }
+                                if (a3 != ' ' && a6 == ' ')
+                                {
+                                    a6 = a3;
+                                    a3 = ' ';
+                                }
+                                if (a6 != ' ' && a9 == ' ')
+                                {
+                                    a9 = a6;
+                                    a6 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 10)
+                        {
+                            if (a1 != ' ' || a4 != ' ' || a7 != ' ')
+                            {
+                                if (a4 != ' ' && a1 == ' ')
+                                {
+                                    a1 = a4;
+                                    a4 = ' ';
+                                }
+                                if (a7 != ' ' && a4 == ' ')
+                                {
+                                    a4 = a7;
+                                    a7 = ' ';
+                                }
+                                if (a4 != ' ' && a1 == ' ')
+                                {
+                                    a1 = a4;
+                                    a4 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 11)
+                        {
+                            if (a2 != ' ' || a5 != ' ' || a8 != ' ')
+                            {
+                                if (a5 != ' ' && a2 == ' ')
+                                {
+                                    a2 = a5;
+                                    a5 = ' ';
+                                }
+                                if (a8 != ' ' && a5 == ' ')
+                                {
+                                    a5 = a8;
+                                    a8 = ' ';
+                                }
+                                if (a5 != ' ' && a2 == ' ')
+                                {
+                                    a2 = a5;
+                                    a5 = ' ';
+                                }
+                            }
+                        }
+                        else if (Shift == 12)
+                        {
+                            if (a3 != ' ' || a6 != ' ' || a9 != ' ')
+                            {
+                                if (a6 != ' ' && a3 == ' ')
+                                {
+                                    a3 = a6;
+                                    a6 = ' ';
+                                }
+                                if (a9 != ' ' && a6 == ' ')
+                                {
+                                    a6 = a9;
+                                    a9 = ' ';
+                                }
+                                if (a6 != ' ' && a3 == ' ')
+                                {
+                                    a3 = a6;
+                                    a6 = ' ';
+                                }
+                            }
+                        }
+                        BoardScore = 0;
+                        ActualNumOfShifts++;
+                    }
                 }
             }
         }
